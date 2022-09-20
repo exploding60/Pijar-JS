@@ -5,4 +5,5 @@ let address = {
 }
 
 let isMerried = false
-let hobbies = ['Gaming','Tidur','Nonton youtube']
+let hobbies = ['Gaming ','Tidur ','Nonton youtube ']
+
