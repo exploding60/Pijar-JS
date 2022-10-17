@@ -14,11 +14,10 @@ function pijarFood(harga,voucher,jarak,pajak){
             diskon = 30000
         }
     }
-    console.log(diskon)
     
     pajak == true ? ppn = 0.05 * harga : ppn = 0 // decision pajak
     
-    jarak > 2 ? biayaAntar = 5000 + (Math.floor(jarak-2) * 3000) : biayaAntar = 5000 // decision biaya antar
+    jarak > 2 ? biayaAntar = 5000 + (Math.ceil(jarak-2) * 3000) : biayaAntar = 5000 // ceil untuk membulatkan keatas 
     console.log(biayaAntar)
 
 
@@ -29,4 +28,5 @@ console.log(`Pajak          : Rp. ${ppn}`)
 console.log(`Subtotal       : Rp. ${harga - diskon + biayaAntar + ppn}`)
 }
 
-pijarFood(0000,"PIJARFOOD5",0,false)
+pijarFood(125000,"PIJAR",2,false)
+pijarFood(125000,"PIJARFOOD5",2.5,false)
